@@ -4,7 +4,7 @@ const app = express();
 let score = 0;
 
 // insert new highscore
-app.get("/up", (request, response) => {
+app.get("/green", (request, response) => {
   score++;
 	console.log("score increased to: " + score);
   let myobj = {score: score}
@@ -12,7 +12,7 @@ app.get("/up", (request, response) => {
   response.json(myobj);
 });
 
-app.get("/down", (request, response) => {
+app.get("/red", (request, response) => {
   score--;
 	console.log("score decreased to: " + score);
   let myobj = {score: score}
@@ -26,6 +26,14 @@ app.get("/score", (request, response) => {
   response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
 
+});
+
+app.get("/reset", (request, response) => {
+  score = 0;
+  console.log("score reset to: " + score);
+  let myobj = {score: score}
+  response.header("Access-Control-Allow-Origin", "*");
+  response.json(myobj);
 });
 
 // start server

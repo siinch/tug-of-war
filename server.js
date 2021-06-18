@@ -1,8 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
 let score = 0;
 
 // insert new highscore

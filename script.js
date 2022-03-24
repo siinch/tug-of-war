@@ -1,4 +1,4 @@
-setInterval(updateScore, 1000);
+setInterval(updateScore, 200);
 setInterval(updateColor, 1000/60)
 
 let score = 0;

@@ -1,9 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+app.use(express.static("./"));
 let score = 0;
 
-// insert new highscore
+app.get("/", (request, response) => {
+  response.sendFile("index.html");
+})
+
 app.get("/green", (request, response) => {
   score++;
 	console.log("score increased to: " + score);
@@ -37,5 +41,5 @@ app.get("/reset", (request, response) => {
 });
 
 // start server
-const port = 3001;
+const port = 3000;
 app.listen(port, () => console.log("Listening on port " + port));

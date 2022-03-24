@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
 app.use(express.static("./"));
 let score = 0;
@@ -12,7 +11,6 @@ app.get("/green", (request, response) => {
   score++;
 	console.log("score increased to: " + score);
   let myobj = {score: score}
-  response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
 });
 
@@ -20,13 +18,11 @@ app.get("/red", (request, response) => {
   score--;
 	console.log("score decreased to: " + score);
   let myobj = {score: score}
-  response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
 });
 
 app.get("/score", (request, response) => {
   let myobj = {score: score}
-  response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
 
 });
@@ -35,7 +31,6 @@ app.get("/reset", (request, response) => {
   score = 0;
   console.log("score reset to: " + score);
   let myobj = {score: score}
-  response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
 });
 

@@ -17,13 +17,16 @@ document.body.style.background = "red";
 
 let helpGreenButton = document.body
 .appendChild(document.createElement("button"));
-helpGreenButton.style.background = "green";
+helpGreenButton.style.background = "lightgreen";
 helpGreenButton.innerHTML = "HELP GREEN";
 helpGreenButton.style.width = "30%";
 helpGreenButton.style.height = "30%";
 helpGreenButton.style.position = "fixed";
 helpGreenButton.style.bottom = "1%";
 helpGreenButton.style.left = "1%";
+helpGreenButton.style.fontSize = "30px";
+helpGreenButton.style.borderColor = "black";
+helpGreenButton.style.border = "solid";
 helpGreenButton.addEventListener("click", helpGreen);
 
 function helpGreen () {
@@ -39,14 +42,17 @@ function helpGreen () {
 
 let helpRedButton = document.body
 .appendChild(document.createElement("button"));
-helpRedButton.style.background = "red";
-helpRedButton.innerHTML = "HELP GREEN";
+helpRedButton.style.background = "pink";
+helpRedButton.innerHTML = "HELP RED";
 helpRedButton.style.width = "30%";
 helpRedButton.style.height = "30%";
 helpRedButton.style.float = "right";
 helpRedButton.style.position = "fixed";
 helpRedButton.style.bottom = "1%";
 helpRedButton.style.right = "1%";
+helpRedButton.style.fontSize = "30px";
+helpRedButton.style.borderColor = "black";
+helpRedButton.style.border = "solid";
 helpRedButton.addEventListener("click", helpRed);
 
 function helpRed () {

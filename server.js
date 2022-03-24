@@ -25,7 +25,6 @@ app.get("/red", (request, response) => {
 });
 
 app.get("/score", (request, response) => {
-  console.log("score updated to: " + score);
   let myobj = {score: score}
   response.header("Access-Control-Allow-Origin", "*");
   response.json(myobj);
